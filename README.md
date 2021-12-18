@@ -70,11 +70,11 @@ One common method of breaking down the problem is to place levels of concern int
 
 The most popular layer system for networking is called the **Open Systems Interconnection** model (OSI model). It was standardized in 1977 and is published as ISO 7498. It has seven layers:
 
-<center>
+<div align="center">
 
 ![OSI Model](assets/OSI%20model.png)
 
-</center>
+</div>
 
  - **Physical (1)**: This is the level of physical communication in the real world. At this level, we have specifications for things such as the voltage levels on an Ethernet cable, what each pin on a connector is for, the radio frequency of Wi-Fi, and the light flashes over an optic fiber.
  - **Data Link (2)**: This level builds on the physical layer. It deals with protocols for directly communicating between two nodes. It defines how a direct message between nodes starts and ends (framing), error detection and correction, and flow control.
@@ -90,11 +90,11 @@ It should be noted that chunks of data are often referred to by different names 
 
 The **TCP/IP protocol suite** is the most common network communication model in use today. The TCP/IP reference model differs a bit from the OSI model, as it has only four layers instead of seven.
 
-<center>
+<div align="center">
 
 ![TCP/IP Model](assets/tcpip%20model.png)
 
-</center>
+</div>
 
 - **Network Access layer (1)**: On this layer, physical connections and data framing happen. Sending an Ethernet or Wi-Fi packet are examples of layer 1 concerns.
 - **Internet layer (2)**: This layer deals with the concerns of addressing packets and routing them over multiple interconnection networks. It's at this layer that an IP address is defined.
@@ -105,11 +105,11 @@ The **TCP/IP protocol suite** is the most common network communication model in 
 
 When communicating over a network, data must be processed down through the layers at the sender and up again through the layers at the receiver. For example, if we have a web server, Host A, which is transmitting a web page to the receiver, Host B, it may look like this:
 
-<center>
+<div align="center">
 
 ![Data Flow](assets/dataflow.png)
 
-</center>
+</div>
 
 The web page contains a few paragraphs of text, but the web server doesn't only send the text by itself. For the text to be rendered correctly, it must be encoded in an HTML structure.
 In some cases, the text is already preformatted into HTML and saved that way but, in this example, we are considering a web application that dynamically generates the HTML, which is the most common paradigm for dynamic web pages. As the text cannot be transmitted directly, neither can the HTML. It instead must be transmitted as part of an HTTP response. The web server does this by applying the appropriate HTTP response header to the HTML.
@@ -117,11 +117,11 @@ The HTTP is transmitted as part of a TCP session. This isn't done explicitly by 
 The TCP packet is routed by an IP packet.
 This is transmitted over the wire in an Ethernet packet (or another protocol)
 
-<center>
+<div align="center">
 
 ![Encapsulated Data](assets/encapsulated%20data.png)
 
-</center>
+</div>
 
 ## Internet Protocol
 
